@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">sFlashcard</string>
+    <string name="what_genus_do_dogs_belong_to">What genus do dogs belong to?</string>
+    <string name="genus">Genus</string>
+    <string name="canis">canis</string>
+    <string name="Canis">Canis</string>
 </resources>
