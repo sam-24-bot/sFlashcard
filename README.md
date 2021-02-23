@@ -8,7 +8,7 @@ The purpose of this app to is display the front and back of a flashcard. First t
 ### App Walk-though
 Updated App with some optional features
 
-<img src="YOUR_GIF_URL_HERE" width=200><br>
+<img src="http://g.recordit.co/Ux4LasnDql.gif" width=200><br>
 
 ## Required
 - [x] Create New Project in Android Studio
