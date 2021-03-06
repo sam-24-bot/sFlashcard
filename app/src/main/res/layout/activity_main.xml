@@ -6,14 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <TextView
         android:id="@+id/flashcard_question"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:gravity="center"
         android:text="@string/what_genus_do_dogs_belong_to"
-        android:textSize="40sp" />
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:background="@drawable/card_background"
+        android:elevation="2dp"
+        />
 
     <TextView
         android:id="@+id/flashcard_answer"
@@ -23,5 +26,17 @@
         android:gravity="center"
         android:text="@string/Canis"
         android:textSize="40sp"
+        android:background="@drawable/othercard_background"
+        android:textColor="#ff879c"
         />
+    
+    <ImageView
+        android:id="@+id/plus_button"
+        android:src="@drawable/plus_icon"
+        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        />
+
 </RelativeLayout>
