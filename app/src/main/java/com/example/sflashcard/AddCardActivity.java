@@ -37,8 +37,10 @@ public class AddCardActivity extends AppCompatActivity {
 
         });
 
-        String s1 = getIntent().getStringExtra("question"); // this string will be 'harry potter`
-        String s2 = getIntent().getStringExtra("answer"); // this string will be 'voldemort'
+        String s1 = getIntent().getStringExtra("question");
+        String s2 = getIntent().getStringExtra("answer");
+
+
 
     }
 }
