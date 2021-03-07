@@ -1,5 +1,21 @@
 # sFlashcard
 
+## Lab 2
+
+### App Description
+The purpose of this app is to give the user the ability to enter their own question and answer. Users are given the ability to save their question and answer so that they are both displayed on the flashcards by clicking on the save button on the left bottom corner. In addition,users also have the option to cancel by selecting the 'x' button on the bottom right hand corner. Lastly, a user can enter a different question and answer by clicking on the plus icon in the right bottom corner. 
+
+### App Walk-though
+<img src="http://g.recordit.co/rFjyVxH8C0.gif" width=200><br>
+
+## Required
+- [x] User can click on a ‘+’ button that takes the user to new ‘Add Card Screen’
+- [x] The 'Add Card Screen' has a cancel button to take the user back to the main screen
+- [x] User can enter and submit a Question and Answer through the 'Add Card Screen'
+- [x] User will see the card they just created on the main screen when they press the 'Save Button'
+- [x] Push your progress to GitHub!
+
+
 ## Lab 1
 
 ### App Description
