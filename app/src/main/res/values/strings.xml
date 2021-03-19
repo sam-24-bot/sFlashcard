@@ -4,4 +4,7 @@
     <string name="genus">Genus</string>
     <string name="canis">canis</string>
     <string name="Canis">Canis</string>
+    <string name="enter_the_question">Enter the question</string>
+    <string name="enter_the_answer">Enter the answer</string>
+    <string name="todo">TODO</string>
 </resources>

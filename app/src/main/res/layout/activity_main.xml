@@ -39,4 +39,11 @@
         android:layout_alignParentBottom="true"
         />
 
+    <ImageView
+        android:id="@+id/next_icon"
+        android:src="@drawable/next_icon"
+        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/flashcard_question"/>
 </RelativeLayout>
