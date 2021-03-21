@@ -6,7 +6,7 @@
 The purpose of this app is to allow the user to enter more than one question and answer and to be able to view them. Users will be able to see several questions and answers by selecting the 'next' button after they've submitted their own question and answer.
 
 ### App Walk-though
-<img src="http://g.recordit.co/tigv5bNjDs.gif" width=200><br>
+<img src="https://recordit.co/NZeLjxfF5J" width=200><br>
 
 ## Required
 - [x] User can create a card and still see their created card when the app is relaunched.
