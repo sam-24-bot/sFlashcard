@@ -64,12 +64,6 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-        Intent intent = new Intent(MainActivity.this, AddCardActivity.class);
-        intent.putExtra("question", " ");
-        intent.putExtra("answer", " ");
-        MainActivity.this.startActivityForResult(intent, 100);
-
-
 
         findViewById(R.id.next_icon).setOnClickListener(new View.OnClickListener() {
             @Override
