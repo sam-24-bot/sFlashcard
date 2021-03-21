@@ -25,7 +25,7 @@ The purpose of this app is to allow the user to enter more than one question and
 The purpose of this app is to give the user the ability to enter their own question and answer. Users are given the ability to save their question and answer so that they are both displayed on the flashcards by clicking on the save button on the left bottom corner. In addition,users also have the option to cancel by selecting the 'x' button on the bottom right hand corner. Lastly, a user can enter a different question and answer by clicking on the plus icon in the right bottom corner. 
 
 ### App Walk-though
-<img src="http://g.recordit.co/rFjyVxH8C0.gif" width=200><br>
+<img src="http://g.recordit.co/NZeLjxfF5J.gif" width=200><br>
 
 ## Required
 - [x] User can click on a ‘+’ button that takes the user to new ‘Add Card Screen’
