@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -37,17 +38,13 @@ public class AddCardActivity extends AppCompatActivity {
                     data.putExtra("question", card_question); // puts one string into the Intent, with the key as 'string1'
                     data.putExtra("answer", card_answer); // puts another string into the Intent, with the key as 'string2
                     setResult(RESULT_OK, data); // set result code and bundle data for response
-                    finish(); // closes this activity and pass data to the original activity that launched this activity
-
+                    finish(); //closes this activity and pass data to the original activity that launched this activity
                 }
-
             }
-
         });
 
         String s1 = getIntent().getStringExtra("question");
         String s2 = getIntent().getStringExtra("answer");
-
 
 
     }

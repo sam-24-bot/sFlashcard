@@ -69,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("answer", " ");
         MainActivity.this.startActivityForResult(intent, 100);
 
+
+
         findViewById(R.id.next_icon).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
