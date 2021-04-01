@@ -2,10 +2,16 @@ package com.example.sflashcard;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.view.animation.Animation;
+import android.view.ViewAnimationUtils;
+import android.animation.Animator;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import android.content.Intent;
+
+import java.security.AccessController;
 import java.util.*;
 import com.google.android.material
         .snackbar
@@ -41,6 +47,27 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 FlashcardQuestion.setVisibility(View.INVISIBLE);
                 FlashcardAnswer.setVisibility(View.VISIBLE);
+
+                View answerSideView = findViewById(R.id.flashcard_answer);
+                View questionSideView = findViewById(R.id.flashcard_question);
+
+                // get the center for the clipping circle
+                int cx = answerSideView.getWidth() / 2;
+                int cy = answerSideView.getHeight() / 2;
+
+// get the final radius for the clipping circle
+                float finalRadius = (float) Math.hypot(cx, cy);
+
+// create the animator for this view (the start radius is zero)
+                Animator anim = ViewAnimationUtils.createCircularReveal(answerSideView, cx, cy, 0f, finalRadius);
+
+// hide the question and show the answer to prepare for playing the animation!
+                questionSideView.setVisibility(View.INVISIBLE);
+                answerSideView.setVisibility(View.VISIBLE);
+
+                anim.setDuration(500);
+                anim.start();
+
             }
 
         });
@@ -60,19 +87,46 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AddCardActivity.class);
                 MainActivity.this.startActivity(intent);
+                overridePendingTransition(R.anim.first_animation, R.anim.second_animation);
             }
-
         });
 
 
         findViewById(R.id.next_icon).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final Animation leftOutAnim = AnimationUtils.loadAnimation(v.getContext(), R.anim.second_animation);
+                final Animation rightInAnim = AnimationUtils.loadAnimation(v.getContext(), R.anim.first_animation);
+
+                findViewById(R.id.flashcard_question).startAnimation(leftOutAnim);
+
+                leftOutAnim.setAnimationListener(new Animation.AnimationListener() {
+                    @Override
+                    public void onAnimationStart(Animation animation) {
+                        // this method is called when the animation first starts
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animation animation) {
+                        // this method is called when the animation is finished playing
+                        findViewById(R.id.flashcard_question).startAnimation(rightInAnim);
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animation animation) {
+                        // we don't need to worry about this method
+                    }
+                });
+
+
+
                 // don't try to go to next card if you have no cards to begin with
                 if (allFlashcards.size() == 0)
                     return;
                 // advance our pointer index so we can show the next card
                 currentCardDisplayedIndex++;
+
 
                 // make sure we don't get an IndexOutOfBoundsError if we are viewing the last indexed card in our list
                 if(currentCardDisplayedIndex >= allFlashcards.size()) {
@@ -90,7 +144,10 @@ public class MainActivity extends AppCompatActivity {
                 ((TextView) findViewById(R.id.flashcard_question)).setText(flashcard.getAnswer());
                 ((TextView) findViewById(R.id.flashcard_answer)).setText(flashcard.getQuestion());
             }
+
         });
+
+
 
     }
 
