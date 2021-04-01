@@ -1,5 +1,19 @@
 # sFlashcard
 
+## Lab 4
+
+### App Description
+In this lab, several animations were added to the app in order to make it more interesting to the user. These animations include those check marked on the required section for Lab 4.
+
+### App Walk-though
+<img src="http://g.recordit.co/r5ylIUxU0Z.gif" width=200><br>
+
+## Required
+- [x] User sees a transition animation when going from the main screen to the add card screen.
+- [x] User sees a reveal animation when the flashcard is tapped and the answer is shown
+- [x] User sees flashcards animating in / out when the 'next' button is tapped
+
+
 ## Lab 3
 
 ### App Description
